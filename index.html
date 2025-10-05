@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Avcon Tech — Startup Accelerator</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Optional basic CSP for static pages -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 img-src 'self' https: data:;
+                 style-src 'self' 'unsafe-inline';
+                 script-src 'self';
+                 frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+                 connect-src https://formspree.io;">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">avcon<span>.tech</span></div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Premium startup websites, built like products.</h1>
+      <p>We ship Apple-level polish with AI-touched motion, fast performance, and clean UX.</p>
+      <a class="cta" href="#contact">Start a project</a>
+    </section>
+
+    <section id="work" class="work">
+      <h2>Selected Work</h2>
+      <div class="grid">
+        <div class="card">Fintech MVP</div>
+        <div class="card">AI SaaS</div>
+        <div class="card">Marketplace</div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>Video Testimonials</h2>
+      <div class="video-grid">
+        <!-- Replace the IDs with your own YouTube video IDs -->
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Client Testimonial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/3GwjfUFyY6M"
+            title="Client Testimonial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <!-- 1) Create a Formspree project, get your endpoint URL, and paste it in action="" -->
+      <form id="contactForm" action="https://formspree.io/f/mqaylpre" method="POST" novalidate>
+        <!-- Honeypot anti-spam (hidden field humans won't fill) -->
+        <input type="text" name="_gotcha" autocomplete="off" class="hp" tabindex="-1" />
+        <!-- Where Formspree should send confirmation -->
+        <input type="hidden" name="_subject" value="New inquiry from avcon.tech" />
+        <input type="hidden" name="_template" value="table" />
+
+        <label>
+          Your Name
+          <input name="name" type="text" required />
+        </label>
+        <label>
+          Your Email
+          <input name="email" type="email" required />
+        </label>
+        <label>
+          Project Details
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <button type="submit">Send Message</button>
+        <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="email-fallback">Prefer email? <a href="mailto:contact@avcon.tech">contact@avcon.tech</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Avcon Tech</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
