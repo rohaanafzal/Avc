@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-    
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVCON - Tech Solutions for Startups</title>
@@ -205,7 +197,7 @@
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -302,37 +294,130 @@
         }
 
         @media (max-width: 768px) {
+            nav {
+                padding: 1rem 4%;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .cta-btn {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                min-height: 85vh;
+                padding: 2rem 6%;
+            }
+
             .hero h1 {
-                font-size: 3rem;
-                letter-spacing: -1px;
+                font-size: 2.2rem;
+                letter-spacing: -0.5px;
+                margin-bottom: 1rem;
+                line-height: 1.2;
             }
 
             .hero p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+                line-height: 1.5;
             }
 
             .hero-buttons {
                 flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                padding: 1rem 2rem;
+                font-size: 1rem;
             }
 
             .nav-links {
                 display: none;
             }
 
+            .section {
+                padding: 4rem 6%;
+            }
+
             .section-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                letter-spacing: -1px;
+                line-height: 1.2;
             }
 
-            .cta-section h2 {
-                font-size: 2.8rem;
-            }
-
-            .cta-section p {
-                font-size: 1.2rem;
+            .section-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 3rem;
             }
 
             .feature-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .feature-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .feature-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .feature-card p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .cta-section {
+                padding: 5rem 6%;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+                letter-spacing: -1px;
+                line-height: 1.2;
+            }
+
+            .cta-section p {
+                font-size: 1.1rem;
+                line-height: 1.5;
+                margin-bottom: 2rem;
+            }
+
+            .email-btn {
+                width: 100%;
+                max-width: 320px;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            footer {
+                padding: 2rem 6%;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.7rem;
             }
         }
     </style>
@@ -472,7 +557,8 @@
                 this.size = Math.random() * 1.5 + 0.5;
                 this.speedX = Math.random() * 0.3 - 0.15;
                 this.speedY = Math.random() * 0.3 - 0.15;
-                this.opacity = Math.random() * 0.3 + 0.1;
+                this.opacity = Math.random() * 0.4 + 0.15;
+                this.hue = Math.random() * 60 + 180;
             }
 
             update() {
